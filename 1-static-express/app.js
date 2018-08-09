@@ -18,6 +18,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+/*
+ * This is the actual code that serves the webpage!
+ */
 app.get('/', function(req, res) {
 	res.sendFile('index.html');
 });
